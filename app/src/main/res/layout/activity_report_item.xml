@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.inuc.wifiuse.report.widget.ReportItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            layout="@layout/toolbar_mybar"
+            />
+        <TextView
+            android:id="@+id/mrtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="@dimen/textsize_25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/textsize_25sp"
+                android:text="请假类型："
+                android:textColor="#a4a4a3" />
+
+            <TextView
+                android:id="@+id/mtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_25sp"
+                android:text="你猜" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_25sp"
+            android:layout_marginLeft="10dp"
+            android:text="内容："
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:id="@+id/mcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_25sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="woyaoqingjiadfdsfdsfdsfdsfdsfdsgfdsgdfgsgdhgdsgfdvgfdsgfdsg" />
+
+        <TextView
+            android:id="@+id/reportTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/sn_20sp"
+            android:text="2015.4.14"
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B9B8B8" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="连主官："
+            android:textColor="#a4a4a3" />
+
+
+        <TextView
+            android:id="@+id/Instruction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textSize="@dimen/textsize_25sp"
+            android:text="管理1" />
+
+        <TextView
+            android:id="@+id/Instruction2Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sn_20sp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="2015.4.14"
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B9B8B8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/textsize_25sp"
+            android:text="营主官："
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:id="@+id/Instruction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textSize="@dimen/textsize_25sp"
+            android:text="管理二" />
+
+        <TextView
+            android:id="@+id/Instruction1Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sn_20sp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="2015.4.14"
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B9B8B8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/textsize_25sp"
+            android:text="机关："
+            android:textColor="#a4a4a3" />
+
+        <TextView
+            android:id="@+id/Instruction0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_25sp"
+            android:layout_marginLeft="40dp"
+            android:text="管理三" />
+
+        <TextView
+            android:id="@+id/Instruction0Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sn_20sp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="2015.4.14"
+            android:textColor="#a4a4a3" />
+
+        <EditText
+            android:id="@+id/myinstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="start"
+            android:textSize="@dimen/textsize_25sp"
+            android:background="@drawable/login"
+            android:hint="我的回复"
+            android:lines="4" />
+
+        <Button
+            android:id="@+id/mrsubmit"
+            android:textSize="@dimen/textsize_25sp"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_button"
+
+            android:text="提交" />
+
+    </LinearLayout>
+
+</RelativeLayout>
