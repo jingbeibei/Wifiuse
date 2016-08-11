@@ -39,7 +39,7 @@ public class ReportDealFragment extends Fragment implements ReportView, SwipeRef
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private RecyclerView mRecyclerView;
     private List<ReportBean> mData;
-    private int pageIndex = 0;
+    private int pageIndex = 1;
     private ReportAdapter mAdapter;
     private ReportPresenter mReportPresenter;
     private LinearLayoutManager mLayoutManager;
@@ -114,16 +114,17 @@ public class ReportDealFragment extends Fragment implements ReportView, SwipeRef
             mData = new ArrayList<ReportBean>();
         }
         mData.addAll(reportList);
-        if (pageIndex == 0) {
+        if (pageIndex == 1) {
             mAdapter.setmDate(mData);
         } else {
             //如果没有更多数据了,则隐藏footer布局
             if (reportList == null || reportList.size() == 0) {
                 mAdapter.isShowFooter(false);
+                Snackbar.make(mRecyclerView, "暂无更多...", Snackbar.LENGTH_SHORT).show();
             }
             mAdapter.notifyDataSetChanged();
         }
-        pageIndex += Urls.PAZE_SIZE;
+        pageIndex +=1;
     }
 
     @Override
@@ -146,11 +147,11 @@ public class ReportDealFragment extends Fragment implements ReportView, SwipeRef
 
     @Override
     public void onRefresh() {
-        pageIndex = 0;
+        pageIndex = 1;
         if (mData != null) {
             mData.clear();
         }
-        mReportPresenter.loadReport( pageIndex,times,code,applicationid,username,parameter);
+        mReportPresenter.loadReport( pageIndex,Urls.PAZE_SIZE,times,code,applicationid,username,parameter);
     }
 
     private ReportAdapter.OnItemClickListener mOnItemClickListener = new ReportAdapter.OnItemClickListener() {
@@ -183,7 +184,7 @@ public class ReportDealFragment extends Fragment implements ReportView, SwipeRef
                     && mAdapter.isShowFooter()) {
                 //加载更多
               //  LogUtils.d(TAG, "loading more data");
-                mReportPresenter.loadReport( pageIndex + Urls.PAZE_SIZE,times,code,applicationid,username,parameter);
+                mReportPresenter.loadReport( pageIndex ,Urls.PAZE_SIZE,times,code,applicationid,username,parameter);
             }
         }
     };

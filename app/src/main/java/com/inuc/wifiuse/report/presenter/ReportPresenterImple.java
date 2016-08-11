@@ -23,12 +23,12 @@ public class ReportPresenterImple implements ReportPresenter,ReportModelImple.On
     }
 
     @Override
-    public void loadReport(int pageIndex,String times,String code,long applicationID,String username,int type) {
+    public void loadReport(int pageIndex,int pageSize,String times,String code,long applicationID,String username,int type) {
         String url="";
         if(type==0){
-            url= Urls.GetReportsURL+"times="+times+"&code="+code+"&applicationID="+applicationID+"&username="+username;
+            url= Urls.GetReportsURL+"times="+times+"&code="+code+"&applicationID="+applicationID+"&username="+username+"&pageIndex="+pageIndex+"&pageSize="+pageSize;
         }else{
-        url= Urls.GetReportsForAdminURL+"times="+times+"&code="+code+"&applicationID="+applicationID+"&username="+username+"&type="+type;
+        url= Urls.GetReportsForAdminURL+"times="+times+"&code="+code+"&applicationID="+applicationID+"&username="+username+"&type="+type+"&pageIndex="+pageIndex+"&pageSize="+pageSize;
         }
         LogUtils.d(TAG, url);
         //只有第一页的或者刷新的时候才显示刷新进度条

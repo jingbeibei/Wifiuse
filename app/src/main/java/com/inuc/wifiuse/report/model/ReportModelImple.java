@@ -6,6 +6,7 @@ import com.inuc.wifiuse.beans.ReportBean;
 import com.inuc.wifiuse.utils.JsonUtils;
 import com.inuc.wifiuse.utils.OkHttpUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +31,9 @@ public class ReportModelImple implements ReportModel{
                 List<ReportBean> reportBeanList=new Gson().fromJson(response,new TypeToken< List<ReportBean>>(){}.getType());
                     listener.onSuccess( reportBeanList);
                 }else {
-                    listener.onFailure("load report list failure.");
+                    List<ReportBean> reportBeanList1=new ArrayList<ReportBean>();
+                    listener.onSuccess(reportBeanList1);
+                   // listener.onFailure("load report list failure.");
                 }
 
             }

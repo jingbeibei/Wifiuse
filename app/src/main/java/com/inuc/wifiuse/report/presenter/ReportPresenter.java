@@ -5,5 +5,5 @@ package com.inuc.wifiuse.report.presenter;
  */
 public interface ReportPresenter {
 
-    void loadReport( int page,String times,String code,long applicationID,String username,int type);
+    void loadReport( int pageindex,int pagesize,String times,String code,long applicationID,String username,int type);
 }
