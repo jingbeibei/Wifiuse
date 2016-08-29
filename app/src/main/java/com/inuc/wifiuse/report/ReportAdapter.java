@@ -131,8 +131,7 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             AnswerTime = (TextView) v.findViewById(R.id.rAnswerTime);
             v.setOnClickListener(this);
         }
-      //  很多事情都是很简单的，你应该给我机会让我走进去，你的一个点头或者一个默许都会让你逐渐的走出来，点头默许很容易嘛，你呀就是懒得去想，懒得去做，就想简简单单，什么都不去考虑，
-   //喜欢这种感觉，但却模模糊糊，你不放开自己，怎么接受我呢
+
         @Override
         public void onClick(View view) {
             if (mOnItemClickListener != null) {
